@@ -30,3 +30,33 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 //Compare player and computer choice and check who won
+
+function game() {
+  let playerPoints = 0;
+  let computerPoints = 0;
+
+  for (i = 1; i <= 5; i++) {
+    const matchResult = playRound()
+    console.log('ROUND: ' + i)
+    if (matchResult === 'PlayerWins') {
+      console.log('Congratulations! You won round ' + i)
+      ++playerPoints;
+    
+    } else if (matchResult === 'PlayerLoses') {
+      console.log('Better luck next time! You lost round ' + i)
+      ++computerPoints;
+    
+    } else {
+      console.log('Round ' + i + ' was a tie!')
+    }
+  }
+  if (playerPoints > computerPoints) {
+    return `Player won the game! The score was: ${playerPoints} X ${computerPoints}`;
+  
+  } else if (playerPoints < computerPoints) {
+    return `Player lost the game! The score was: ${playerPoints} X ${computerPoints}`;
+  
+  } else {
+    return `It was a tie! The score was: ${playerPoints} X ${computerPoints}`;
+  }
+}
