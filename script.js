@@ -1,7 +1,12 @@
 function getPlayerChoice() {
-  return prompt('Chose: Rock, Paper or Scissors').toLowerCase();
+  const buttons = document.querySelectorAll("button")
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      return button.classList.value
+    })
+  })
 }
-//Get player's choice by asking them to choose between rock, paper or scissors.
+//Get player's choice by listening to the buttons they clicked.
 
 function getComputerChoice() {
   const randomChoice = Math.floor(Math.random() * 3) + 1
