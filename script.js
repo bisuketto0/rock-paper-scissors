@@ -1,13 +1,3 @@
-function getPlayerChoice() {
-  const buttons = document.querySelectorAll("button")
-  buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-      return button.classList.value
-    })
-  })
-}
-//Get player's choice by listening to the buttons they clicked.
-
 function getComputerChoice() {
   const randomChoice = Math.floor(Math.random() * 3) + 1
   if (randomChoice === 1) {
@@ -25,13 +15,19 @@ function playRound(playerSelection, computerSelection) {
   computerSelection = getComputerChoice();
 
   if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'scissors' && computerSelection === 'paper')) {
-    return 'PlayerWins';
+    console.log('PlayerWins');
   
   } else if ((playerSelection === 'rock' && computerSelection === 'paper') || (playerSelection === 'paper' && computerSelection === 'scissors') || (playerSelection === 'scissors' && computerSelection === 'rock')) {
-    return 'PlayerLoses';
+    console.log('PlayerLoses');
   
   } else {
-    return 'Draw';
+    console.log('Draw');
   }
 }
 //Compare player and computer choice and check who won
+
+const buttons = document.querySelectorAll("button")
+buttons.forEach((button) => {
+  button.addEventListener('click', playRound(button))
+})
+//Play round every time the players chooses between R, P and S
