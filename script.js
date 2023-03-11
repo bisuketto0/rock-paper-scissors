@@ -23,12 +23,19 @@ function playRound(playerSelection) {
   computerSelection = getComputerChoice();
 
   if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'scissors' && computerSelection === 'paper')) {
-    console.log('PlayerWins');
+    showResults('Player Wins!');
   
   } else if ((playerSelection === 'rock' && computerSelection === 'paper') || (playerSelection === 'paper' && computerSelection === 'scissors') || (playerSelection === 'scissors' && computerSelection === 'rock')) {
-    console.log('PlayerLoses');
+    showResults('Player Loses!');
   
   } else {
-    console.log('Draw');
+    showResults("It's a Draw!");
   }
 } //Compare player and computer choice and check who won
+
+function showResults(message) {
+  const results = document.querySelector('.results')
+  const para = document.createElement('p')
+  para.textContent = message
+  results.appendChild(para)
+}
