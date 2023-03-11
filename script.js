@@ -35,7 +35,6 @@ function playRound(playerSelection) {
 
 function showResults(message) {
   const results = document.querySelector('.results')
-  const para = document.createElement('p')
-  para.textContent = message
-  results.appendChild(para)
+  const result = document.querySelector('.result')
+  result.textContent = message
 }
