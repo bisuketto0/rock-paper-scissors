@@ -36,14 +36,34 @@ function playRound(playerSelection) {
     showResults(`<b>${playerSelection}</b> and <b>${computerSelection}</b> are the same! It's a DRAW.`);
   }
   showScore(playerScore, computerScore);
+  showGame(playerScore, computerScore)
 } //Compare player and computer choice and check who won
 
 function showResults(message) {
   const result = document.querySelector('.result')
   result.innerHTML = message
-}
+} //Update the results in the html file
 
 function showScore(playerScore, computerScore) {
   const score = document.querySelector('.score')
   score.innerHTML = `The score is Player <b>${playerScore}</b> X <b>${computerScore}</b> Computer`
+} //Update the score in the html file
+
+function showGame(playerScore, computerScore) {
+  const game = document.querySelector('.game')
+  if (playerScore === 5) {
+    game.textContent = 'Player won the game!'
+    disableButtons()
+
+  } else if (computerScore === 5) {
+    game.textContent = 'Computer won the game!'
+    disableButtons()
+
+  } else {
+    game.textContent = 'First to 5 wins!'
+  }
+}//Check who won the game
+
+function disableButtons() {
+  buttons.forEach((button) => button.disabled = true)
 }
