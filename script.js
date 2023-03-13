@@ -36,13 +36,21 @@ function playRound(playerSelection) {
     showResults("It's a Draw!");
   }
   showScore(playerScore, computerScore);
-  showGame(playerScore, computerScore)
+  showGame(playerScore, computerScore);
+  showSelections(playerSelection, computerSelection);
 } //Compare player and computer choice and check who won
 
 function showResults(message) {
   const result = document.querySelector('.result')
   result.innerHTML = message
 } //Update the results in the html file
+
+function showSelections(playerSelection, computerSelection) {
+  const playerSelectionDiv = document.querySelector('.playerSelection')
+  const compSelectionDiv = document.querySelector('.compSelection')
+  playerSelectionDiv.textContent = playerSelection
+  compSelectionDiv.textContent = computerSelection
+}
 
 function showScore(playerScore, computerScore) {
   const score = document.querySelector('.score')
