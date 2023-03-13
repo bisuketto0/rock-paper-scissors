@@ -46,10 +46,22 @@ function showResults(message) {
 } //Update the results in the html file
 
 function showSelections(playerSelection, computerSelection) {
-  const playerSelectionDiv = document.querySelector('.playerSelection')
-  const compSelectionDiv = document.querySelector('.compSelection')
-  playerSelectionDiv.textContent = playerSelection
-  compSelectionDiv.textContent = computerSelection
+  const playerSelectionImg = document.querySelector('.playerSelection')
+  const compSelectionImg = document.querySelector('.compSelection')
+  if (playerSelection === 'rock') {
+    playerSelectionImg.src = './images/rock.jpg'
+  } else if (playerSelection === 'paper') {
+    playerSelectionImg.src = './images/paper.jpg'
+  } else {
+    playerSelectionImg.src = './images/scissors.jpg'
+  }
+  if (computerSelection === 'rock') {
+    compSelectionImg.src = './images/rock.jpg'
+  } else if (computerSelection === 'paper') {
+    compSelectionImg.src = './images/paper.jpg'
+  } else {
+    compSelectionImg.src = './images/scissors.jpg'
+  }
 }
 
 function showScore(playerScore, computerScore) {
