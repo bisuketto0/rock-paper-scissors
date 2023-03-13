@@ -85,11 +85,11 @@ function showScore(playerScore, computerScore) {
 function showGame(playerScore, computerScore) {
   const game = document.querySelector('.game')
   if (playerScore === 5) {
-    game.textContent = 'Player won the game! Restart the page to play again.'
+    game.textContent = 'You won the game!'
     disableButtons()
 
   } else if (computerScore === 5) {
-    game.textContent = 'Computer won the game! Restart the page to play again.'
+    game.textContent = 'The computer won the game!'
     disableButtons()
 
   } else {

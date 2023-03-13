@@ -58,3 +58,7 @@ img {
 .round-lost {
   color: lightcoral;
 }
+
+.game {
+  margin-bottom: 12px;
+}
