@@ -53,8 +53,10 @@ function showSelections(playerSelection, computerSelection) {
 }
 
 function showScore(playerScore, computerScore) {
-  const score = document.querySelector('.score')
-  score.innerHTML = `The score is Player <b>${playerScore}</b> X <b>${computerScore}</b> Computer`
+  const playerScoreDiv = document.querySelector('.playerScore')
+  const compScoreDiv = document.querySelector('.compScore')
+  playerScoreDiv.textContent = playerScore
+  compScoreDiv.textContent = computerScore
 } //Update the score in the html file
 
 function showGame(playerScore, computerScore) {
