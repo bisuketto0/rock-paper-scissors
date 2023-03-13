@@ -62,3 +62,13 @@ img {
 .game {
   margin-bottom: 12px;
 }
+
+.buttons {
+  display: flex;
+  gap: 12px;
+}
+
+button {
+  border: none;
+  padding: 6px 18px;
+}
