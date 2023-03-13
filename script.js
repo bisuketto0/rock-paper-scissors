@@ -26,14 +26,14 @@ function playRound(playerSelection) {
 
   if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'scissors' && computerSelection === 'paper')) {
     playerScore += 1;
-    showResults(`Player: <b>${playerSelection}</b><br> Computer: <b>${computerSelection}</b><br> <b>${playerSelection}</b> beats <b>${computerSelection}</b><br> Player WINS!`);
+    showResults('Player Won the Round!');
   
   } else if ((playerSelection === 'rock' && computerSelection === 'paper') || (playerSelection === 'paper' && computerSelection === 'scissors') || (playerSelection === 'scissors' && computerSelection === 'rock')) {
     computerScore += 1;
-    showResults(`Player: <b>${playerSelection}</b><br> Computer: <b>${computerSelection}</b><br> <b>${computerSelection}</b> beats <b>${playerSelection}</b><br> Player LOSES!`);
+    showResults('Player Lost the Round!');
   
   } else {
-    showResults(`<b>${playerSelection}</b> and <b>${computerSelection}</b> are the same! It's a DRAW.`);
+    showResults("It's a Draw!");
   }
   showScore(playerScore, computerScore);
   showGame(playerScore, computerScore)
