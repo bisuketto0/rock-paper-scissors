@@ -10,6 +10,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #539298;
+  color: #B8DBDE;
 }
 
 .results {
@@ -46,17 +48,21 @@ img {
   height: auto;
 }
 
+.selIndex {
+  color: #1D636A;
+}
+
 .result {
   font-size: 20px;
   margin-bottom: 12px;
 }
 
 .round-win {
-  color: lightgreen;
+  color: #93D89B;
 }
 
 .round-lost {
-  color: lightcoral;
+  color: #FFB1AD;
 }
 
 .game {
@@ -71,4 +77,14 @@ img {
 button {
   border: none;
   padding: 6px 18px;
+  background-color: #80B6BB;
+  color: #1D636A;
+}
+
+button:hover {
+  background-color: rgb(180, 218, 222);
+}
+
+button:disabled {
+  background-color: #80B6BB;
 }

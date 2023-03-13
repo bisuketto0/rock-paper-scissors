@@ -60,18 +60,18 @@ function showSelections(playerSelection, computerSelection) {
   const playerSelectionImg = document.querySelector('.playerSelection')
   const compSelectionImg = document.querySelector('.compSelection')
   if (playerSelection === 'rock') {
-    playerSelectionImg.src = './images/rock.jpg'
+    playerSelectionImg.src = './images/rock.png'
   } else if (playerSelection === 'paper') {
-    playerSelectionImg.src = './images/paper.jpg'
+    playerSelectionImg.src = './images/paper.png'
   } else {
-    playerSelectionImg.src = './images/scissors.jpg'
+    playerSelectionImg.src = './images/scissors.png'
   }
   if (computerSelection === 'rock') {
-    compSelectionImg.src = './images/rock.jpg'
+    compSelectionImg.src = './images/rock.png'
   } else if (computerSelection === 'paper') {
-    compSelectionImg.src = './images/paper.jpg'
+    compSelectionImg.src = './images/paper.png'
   } else {
-    compSelectionImg.src = './images/scissors.jpg'
+    compSelectionImg.src = './images/scissors.png'
   }
 }
 
