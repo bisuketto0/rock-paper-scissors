@@ -26,11 +26,11 @@ function playRound(playerSelection) {
 
   if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'scissors' && computerSelection === 'paper')) {
     playerScore += 1;
-    showResults('Player Won the Round!');
+    showResults('Round Won!');
   
   } else if ((playerSelection === 'rock' && computerSelection === 'paper') || (playerSelection === 'paper' && computerSelection === 'scissors') || (playerSelection === 'scissors' && computerSelection === 'rock')) {
     computerScore += 1;
-    showResults('Player Lost the Round!');
+    showResults('Round lost!');
   
   } else {
     showResults("It's a Draw!");
@@ -43,6 +43,17 @@ function playRound(playerSelection) {
 function showResults(message) {
   const result = document.querySelector('.result')
   result.innerHTML = message
+  if (message === 'Round Won!') {
+    result.classList.add('round-win')
+    result.classList.remove('round-lost')
+  } else if (message === 'Round lost!') {
+    result.classList.add('round-lost')
+    result.classList.remove('round-win')
+  } else {
+    result.classList.remove('round-win')
+    result.classList.remove('round-lost')
+  }
+
 } //Update the results in the html file
 
 function showSelections(playerSelection, computerSelection) {
