@@ -1,0 +1,1 @@
+Hey! This is a rock, paper & scissors mini-game. You can have some fun with it clicking this link: https://bisuketto0.github.io/rock-paper-scissors/
